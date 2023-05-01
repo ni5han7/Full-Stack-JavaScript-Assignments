@@ -133,3 +133,32 @@ function desc() {
 h3.addEventListener("click", desc)
 ```
 ---
+
+# **DOM Assignment 3**
+
+## **Task**
+On clicking the **Submit** button, Get the ***user entered values*** from the **User Input Board** and Set it to the respective fields on the **User Output Board**.
+
+### **After Update**
+![Output Image](./thirdAssignmentImage/output/task1Output.png)
+
+### **Project Solution**
+```js
+let forms = document.querySelectorAll("form")
+forms[1].addEventListener("submit", (event) =>{
+    event.preventDefault();
+
+    let name = document.querySelector(".userName");
+    let email = document.querySelector(".userEmail");
+    let message = document.querySelector(".userMessage");
+
+    let setName = document.querySelector(".enterName");
+    let setEmail = document.querySelector(".enterMail");
+    let setMessage = document.querySelector(".enterMessage");
+
+    setName.value = name.value;
+    setEmail.value = email.value;
+    setMessage.value = message.value;
+```
+---
+---
